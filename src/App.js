@@ -1,24 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import { Stack } from './components/stack/stack';
+import {Linkedlist} from './components/linkedlist/linkedlist';
+//import {TreeNode} from './components/tree/treenode';
+import {Stacks} from './pages/stacks';
 
 function App() {
+  const stackvalues = [1,2,3,4,5];
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <header className='App-header'>
+        <Stack values = {stackvalues}/>
+        <Linkedlist values = {stackvalues}/>
+        <Stacks />
+        </header>
+       </div>
   );
 }
 
