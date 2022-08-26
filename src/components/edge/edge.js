@@ -1,39 +1,59 @@
 import './edge.css';
-export const Edge = (props) => {
+
+export const Edge = (props)=>{
+    return(
+    props.edgeType=== 'up' ? <Upedge/> : 
+    props.edgeType === 'down' ? <Downedge/> :
+    props.edgeType === 'double' ? <DoubleEdge/>:
+    props.edgeType === 'side-right' ? <SideRight/>:
+    props.edgeType === 'side-left' ? <SideLeft/>:<Leftedge/>
+    );
+}
+
+const Upedge = () => {
     return (
-        props.edgetype === 'up' ?  <UpEdge /> : 
-        props.edgetype === 'down' ?  <DownEdge /> : <LeftEdge /> 
+        <div className='up-edge'>
+            <span>&#8593;</span>
+        </div>
+    );
+}
+
+const Downedge =() => {
+    return (
+        <div className='down-edge'>
+            <span>&#8595;</span>
+        </div>
     )
 }
 
-const DownEdge =() => {
+const Leftedge = () => {
     return (
-        <div className="down-edge">
-            <span> &#8595; </span>
+        <div className='left-edge'>
+            <span>&#8594;</span>
         </div>
     )
 }
 
-const UpEdge = () => {
+const DoubleEdge = () => {
     return (
-        <div className="up-edge">
-            <span> &#8593; </span>
+        <div className='leftright-edge'>
+        <span>&#8596;</span>
         </div>
     )
 }
-/*
-const RightEdge = () => {
+
+const SideRight = () => {
     return (
-        <div className="right-edge">
-            <span> &#8594; </span>
+        <div className='side-right'>
+            <span>&#10136;</span>
         </div>
     )
 }
-*/
-const LeftEdge = () => {
-    return (
-        <div className="left-edge">
-            <span> &#8592; </span>
+
+const SideLeft = () => {
+    return(
+        <div className='side-left'>
+            <span>&#8601;</span>
         </div>
     )
 }

@@ -1,14 +1,36 @@
 .up-edge {
-    height: 60px;
+
     width: 60px;
+    height: 50px;
 }
 .down-edge {
-    height: 60px;
     width: 60px;
+    height: 50px; 
 }
 
 .left-edge {
-    height: 60px;
     width: 60px;
+    height: 40px;
     display: inline;
+}
+
+.leftright-edge {
+    width: 90px;
+    height: 70px;
+    display: inline;
+}
+
+.heavy_right-edge{
+    width: 90px;
+    height: 70px;
+}
+
+.side-right {
+    width: 60px;
+    height: 40px;
+}
+
+.side-left {
+    width: 60px;
+    height: 40px;
 }

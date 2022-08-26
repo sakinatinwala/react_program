@@ -9,7 +9,7 @@ export const Stack = (props) => {
         <div className="stack">
             {values.map((value, index) => {
                 return (
-                    <div key={index}>
+                    <div style = {{display:'grid'}} key={index}>
                         <Node content={value} />
                         {index < length - 1 && <Edge edgetype="down"/>}
                     </div>
